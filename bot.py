@@ -32,7 +32,8 @@ async def handle_link(message: types.Message):
     ydl_opts = {
         'outtmpl': 'video.%(ext)s',
         'format': 'mp4',
-        'quiet': True
+        'quiet': True,
+        'cookies': 'cookies.txt'   # ✅ Добавлено для поддержки cookies (ИЗМЕНЕНИЕ 1)
     }
 
     try:
@@ -56,4 +57,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
